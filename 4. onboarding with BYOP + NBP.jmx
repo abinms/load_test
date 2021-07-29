@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="onboarding with BYOP + NBP" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1587558208000</longProp>
+        <longProp name="ThreadGroup.end_time">1587558208000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">600</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Z3JpZHVzZXI6Z3JpZHVzZXJAMTIz</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">1500</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Parameters" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="REQUEST_ID1" elementType="Argument">
+              <stringProp name="Argument.name">REQUEST_ID1</stringProp>
+              <stringProp name="Argument.value">ONBOARD0C1T</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="REQUEST_ID2" elementType="Argument">
+              <stringProp name="Argument.name">REQUEST_ID2</stringProp>
+              <stringProp name="Argument.value">ONBOARD0C2T</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="REQUEST_ID3" elementType="Argument">
+              <stringProp name="Argument.name">REQUEST_ID3</stringProp>
+              <stringProp name="Argument.value">ONBOARD0C3T</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="REQUEST_ID4" elementType="Argument">
+              <stringProp name="Argument.name">REQUEST_ID4</stringProp>
+              <stringProp name="Argument.value">ONBOARD0C4T</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="REQUEST_ID5" elementType="Argument">
+              <stringProp name="Argument.name">REQUEST_ID5</stringProp>
+              <stringProp name="Argument.value">ONBOARD0C5T</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="REQUEST_ID6" elementType="Argument">
+              <stringProp name="Argument.name">REQUEST_ID6</stringProp>
+              <stringProp name="Argument.value">ONBOARD0C6T</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="PROMO_CODE" elementType="Argument">
+              <stringProp name="Argument.name">PROMO_CODE</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="REFERRAL_CODE" elementType="Argument">
+              <stringProp name="Argument.name">REFERRAL_CODE</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GetAsset" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;Request&quot;: {&#xd;
+        &quot;request_id&quot;: &quot;${REQUEST_ID1}&quot;,&#xd;
+        &quot;request_timestamp&quot;: &quot;25062019140119&quot;,&#xd;
+        &quot;action&quot;: &quot;GetAssets&quot;,&#xd;
+        &quot;userid&quot;: &quot;SR12311875887651b&quot;,&#xd;
+        &quot;username&quot;: &quot;SmartAttacker&quot;,&#xd;
+        &quot;source_node&quot;: &quot;SmartAttacker&quot;,&#xd;
+        &quot;dataset&quot;: {&#xd;
+            &quot;param&quot;: [&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;product_type&quot;,&#xd;
+                    &quot;value&quot;: &quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;asset_status&quot;,&#xd;
+                    &quot;value&quot;: &quot;1&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;asset_id&quot;,&#xd;
+                    &quot;value&quot;: &quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;product_id&quot;,&#xd;
+                    &quot;value&quot;: &quot;41328&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;offset&quot;,&#xd;
+                    &quot;value&quot;: &quot;1&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;limit&quot;,&#xd;
+                    &quot;value&quot;: &quot;3&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;start_range&quot;,&#xd;
+                    &quot;value&quot;: &quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;end_range&quot;,&#xd;
+                    &quot;value&quot;: &quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;pos_id&quot;,&#xd;
+                    &quot;value&quot;: &quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;category_id&quot;,&#xd;
+                    &quot;value&quot;: &quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;is_fresh&quot;,&#xd;
+                    &quot;value&quot;: &quot;true&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;entity_id&quot;,&#xd;
+                    &quot;value&quot;: &quot;200&quot;&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">10001</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/APIGateway/APIRequest/Submit</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <fileName>true</fileName>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">MSISDN</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.Response.asset_details.assets[0].asset_id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOT FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UpdateAsset" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;Request&quot;: {&#xd;
+        &quot;request_id&quot;: &quot;${REQUEST_ID2}&quot;,&#xd;
+        &quot;request_timestamp&quot;: &quot;14122017140116&quot;,&#xd;
+        &quot;action&quot;: &quot;UpdateAssetStatus&quot;,&#xd;
+        &quot;userid&quot;: &quot;SR12311875887651b&quot;,&#xd;
+        &quot;username&quot;: &quot;SmartAttacker&quot;,&#xd;
+        &quot;source_node&quot;: &quot;SmartAttacker&quot;,&#xd;
+        &quot;order_information&quot;: {&#xd;
+            &quot;order_type&quot;: &quot;UpdateAssetStatus&quot;,&#xd;
+            &quot;customer_name&quot;: &quot;&quot;,&#xd;
+            &quot;dataset&quot;: {&#xd;
+                &quot;param&quot;: [&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;asset_id&quot;,&#xd;
+                        &quot;value&quot;: &quot;${MSISDN}&quot;&#xd;
+                    },&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;asset_status&quot;,&#xd;
+                        &quot;value&quot;: &quot;14&quot;&#xd;
+                    },&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;unblock_asset&quot;,&#xd;
+                        &quot;value&quot;: &quot;&quot;&#xd;
+                    },&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;entity_id&quot;,&#xd;
+                        &quot;value&quot;: &quot;200&quot;&#xd;
+                    }&#xd;
+                ]&#xd;
+            }&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">10001</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/APIGateway/APIRequest/Submit</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <fileName>true</fileName>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CreateProfileAccount" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;Request&quot;: {&#xd;
+        &quot;request_id&quot;: &quot;${REQUEST_ID3}&quot;,&#xd;
+        &quot;request_timestamp&quot;: &quot;02072017150211&quot;,&#xd;
+        &quot;action&quot;: &quot;CustomerOnBoarding&quot;,&#xd;
+        &quot;userid&quot;: &quot;1&quot;,&#xd;
+        &quot;username&quot;: &quot;SmartAttacker&quot;,&#xd;
+        &quot;source_node&quot;: &quot;SmartAttacker&quot;,&#xd;
+        &quot;order_information&quot;: {&#xd;
+            &quot;order_type&quot;: &quot;ProfileAccountService&quot;,&#xd;
+            &quot;customer_name&quot;: &quot;tester&quot;,&#xd;
+            &quot;provisioning&quot;: {&#xd;
+                &quot;profiles&quot;: [&#xd;
+                    {&#xd;
+                        &quot;first_name&quot;: &quot;tester&quot;,&#xd;
+                        &quot;last_name&quot;: &quot;S&quot;,&#xd;
+                        &quot;date_of_birth&quot;: &quot;&quot;,&#xd;
+                        &quot;profile_type&quot;: &quot;1&quot;,&#xd;
+                        &quot;occupation&quot;: &quot;Engineer&quot;,&#xd;
+                        &quot;language_id&quot;: &quot;1&quot;,&#xd;
+                        &quot;nationality&quot;: &quot;1&quot;,&#xd;
+                        &quot;organisation&quot;: &quot;Sixdee&quot;,&#xd;
+                        &quot;subscriber_category&quot;: &quot;0&quot;,&#xd;
+                        &quot;subscriber_sub_category&quot;: &quot;1&quot;,&#xd;
+                        &quot;title&quot;: &quot;Mr.&quot;,&#xd;
+                        &quot;identification_details&quot;: [&#xd;
+                            {&#xd;
+                                &quot;identification_type&quot;: &quot;1&quot;,&#xd;
+                                &quot;identification_number&quot;: &quot;N2507047&quot;,&#xd;
+                                &quot;id_issue_date&quot;: &quot;11/29/2016&quot;,&#xd;
+                                &quot;id_expiry_date&quot;: &quot;11/29/2031&quot;,&#xd;
+                                &quot;file_details&quot;: [&#xd;
+                                    {&#xd;
+                                        &quot;ftp_id&quot;: &quot;0&quot;,&#xd;
+                                        &quot;file_name&quot;: &quot;&quot;,&#xd;
+                                        &quot;file_description&quot;: &quot;&quot;,&#xd;
+                                        &quot;file_path&quot;: &quot;&quot;&#xd;
+                                    }&#xd;
+                                ]&#xd;
+                            }&#xd;
+                        ],&#xd;
+                        &quot;addresses&quot;: [&#xd;
+                            {&#xd;
+                                &quot;address_type&quot;: 0,&#xd;
+                                &quot;language_id&quot;: &quot;1&quot;,&#xd;
+                                &quot;addr_line1&quot;: &quot;Purayidathil House &quot;,&#xd;
+                                &quot;addr_line2&quot;: &quot;neeloor&quot;,&#xd;
+                                &quot;addr_line3&quot;: &quot;kottayam&quot;,&#xd;
+                                &quot;addr_line4&quot;: &quot;kerala&quot;,&#xd;
+                                &quot;addr_line5&quot;: &quot;pin:686652&quot;,&#xd;
+                                &quot;addr_line6&quot;: &quot;&quot;,&#xd;
+                                &quot;addr_line7&quot;: &quot;&quot;,&#xd;
+                                &quot;addr_line8&quot;: &quot;&quot;&#xd;
+                            }&#xd;
+                        ],&#xd;
+                        &quot;payment_preferences&quot;: [&#xd;
+                            {&#xd;
+                                &quot;payment_preference&quot;: &quot;3&quot;,&#xd;
+                                &quot;payment_preferences_desc&quot;: &quot;Cash&quot;&#xd;
+                            },&#xd;
+                            {&#xd;
+                                &quot;payment_preference&quot;: &quot;4&quot;,&#xd;
+                                &quot;payment_preferences_desc&quot;: &quot;Cheque&quot;&#xd;
+                            }&#xd;
+                        ],&#xd;
+                        &quot;accounts&quot;: [&#xd;
+                            {&#xd;
+                                &quot;billing_title&quot;: &quot;Mr.&quot;,&#xd;
+                                &quot;billing_name&quot;: &quot;testerP&quot;,&#xd;
+                                &quot;last_name&quot;: &quot;S&quot;,&#xd;
+                                &quot;email_notification&quot;: 0,&#xd;
+                                &quot;notification_email_id&quot;: &quot;&quot;,&#xd;
+                                &quot;sms_notification&quot;: 0,&#xd;
+                                &quot;sms_numbers&quot;: &quot;&quot;,&#xd;
+                                &quot;bill_cycle_id&quot;: &quot;&quot;,&#xd;
+                                &quot;summary_dispatch&quot;: &quot;0&quot;,&#xd;
+                                &quot;itemized_dispatch&quot;: &quot;0&quot;,&#xd;
+                                &quot;itemized_required&quot;: &quot;0&quot;,&#xd;
+                                &quot;dunning_schedule&quot;: &quot;0&quot;,&#xd;
+                                &quot;tax_code&quot;: 0,&#xd;
+                                &quot;tax_plan_group&quot;: &quot;1&quot;,&#xd;
+                                &quot;risk_category&quot;: 4,&#xd;
+                                &quot;auto_pay&quot;: &quot;1&quot;,&#xd;
+                                &quot;addresses&quot;: [&#xd;
+                                    {&#xd;
+                                        &quot;address_type&quot;: 0,&#xd;
+                                        &quot;language_id&quot;: &quot;1&quot;,&#xd;
+                                        &quot;addr_line1&quot;: &quot;Purayidathil house&quot;,&#xd;
+                                        &quot;addr_line2&quot;: &quot;&quot;,&#xd;
+                                        &quot;addr_line3&quot;: &quot;&quot;,&#xd;
+                                        &quot;addr_line4&quot;: &quot;&quot;,&#xd;
+                                        &quot;addr_line5&quot;: &quot;&quot;,&#xd;
+                                        &quot;addr_line6&quot;: &quot;&quot;,&#xd;
+                                        &quot;addr_line7&quot;: &quot;&quot;,&#xd;
+                                        &quot;addr_line8&quot;: &quot;&quot;&#xd;
+                                    }&#xd;
+                                ],&#xd;
+                                &quot;service_groups&quot;: [&#xd;
+                                    {&#xd;
+                                        &quot;services&quot;: [&#xd;
+                                            {&#xd;
+                                                &quot;service_id&quot;: &quot;${MSISDN}&quot;,&#xd;
+                                                &quot;imsi_number&quot;: &quot;&quot;,&#xd;
+                                                &quot;status&quot;: &quot;0&quot;,&#xd;
+                                                &quot;credit_limit&quot;: &quot;0&quot;,&#xd;
+                                                &quot;connection_type&quot;: &quot;2&quot;,&#xd;
+                                                &quot;network_type &quot;: &quot;1&quot;,&#xd;
+                                                &quot;notification_email_id&quot;: &quot;tester@gmail.com&quot;,&#xd;
+                                                &quot;referral_code&quot;: &quot;${REFERRAL_CODE}&quot;,&#xd;
+                                                &quot;promo_code&quot;: &quot;${PROMO_CODE}&quot;,&#xd;
+                                                &quot;addresses&quot;: [&#xd;
+                                                    {&#xd;
+                                                        &quot;address_type&quot;: 0,&#xd;
+                                                        &quot;language_id&quot;: &quot;1&quot;,&#xd;
+                                                        &quot;addr_line1&quot;: &quot;PRIYAgt P&quot;,&#xd;
+                                                        &quot;addr_line2&quot;: &quot;Purayidathil H&quot;,&#xd;
+                                                        &quot;addr_line3&quot;: &quot;&quot;,&#xd;
+                                                        &quot;addr_line4&quot;: &quot;&quot;,&#xd;
+                                                        &quot;addr_line5&quot;: &quot;&quot;,&#xd;
+                                                        &quot;addr_line6&quot;: &quot;&quot;,&#xd;
+                                                        &quot;addr_line7&quot;: &quot;&quot;,&#xd;
+                                                        &quot;addr_line8&quot;: &quot;&quot;&#xd;
+                                                    }&#xd;
+                                                ],&#xd;
+                                                &quot;subscriptions&quot;: [&#xd;
+                                                    {&#xd;
+                                                        &quot;plan_id&quot;: &quot;10009&quot;,&#xd;
+                                                        &quot;plan_name&quot;: &quot;Prepaid cash&quot;,&#xd;
+                                                        &quot;plan_desc&quot;: &quot;Prepaid cash&quot;,&#xd;
+                                                        &quot;is_base_plan&quot;: &quot;true&quot;&#xd;
+                                                    },&#xd;
+                                                    {&#xd;
+                                                        &quot;plan_id&quot;: &quot;10248&quot;,&#xd;
+                                                        &quot;plan_name&quot;: &quot;topping PUBG 500 MB&quot;,&#xd;
+                                                        &quot;plan_desc&quot;: &quot;&quot;,&#xd;
+                                                        &quot;is_base_plan&quot;: &quot;false&quot;&#xd;
+                                                    },&#xd;
+                                                    {&#xd;
+                                                        &quot;plan_id&quot;: &quot;10359&quot;,&#xd;
+                                                        &quot;plan_name&quot;: &quot;Paket Semaumu&quot;,&#xd;
+                                                        &quot;plan_desc&quot;: &quot;special&quot;,&#xd;
+                                                        &quot;is_base_plan&quot;: &quot;false&quot;,&#xd;
+                                                        &quot;charge_code&quot;: &quot;531_526_318_14_1-Location-1&quot;&#xd;
+                                                    }&#xd;
+                                                ]&#xd;
+                                            }&#xd;
+                                        ]&#xd;
+                                    }&#xd;
+                                ]&#xd;
+                            }&#xd;
+                        ]&#xd;
+                    }&#xd;
+                ]&#xd;
+            },&#xd;
+            &quot;dataset&quot;: {&#xd;
+                &quot;param&quot;: [&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;entity_id&quot;,&#xd;
+                        &quot;value&quot;: &quot;200&quot;&#xd;
+                    },&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;topup_amount&quot;,&#xd;
+                        &quot;value&quot;: &quot;200000&quot;&#xd;
+                    },&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;topup_type&quot;,&#xd;
+                        &quot;value&quot;: &quot;1&quot;&#xd;
+                    }&#xd;
+                ]&#xd;
+            }&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">10001</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/APIGateway/APIRequest/Submit</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">ORDER_ID</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.Response.dataSet.param[0].value</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">ACCOUNT_ID</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.Response.dataSet.param[2].value</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">PROFILE_ID</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.Response.dataSet.param[3].value</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="MakePayment" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;Request&quot;: {&#xd;
+        &quot;request_id&quot;: &quot;${REQUEST_ID4}&quot;,&#xd;
+        &quot;request_timestamp&quot;: &quot;30122018210252&quot;,&#xd;
+        &quot;action&quot;: &quot;MakePayment&quot;,&#xd;
+        &quot;source_node&quot;: &quot;SmartAttacker&quot;,&#xd;
+        &quot;userid&quot;: &quot;1799&quot;,&#xd;
+        &quot;username&quot;: &quot;SmartAttacker&quot;,&#xd;
+        &quot;order_information&quot;: {&#xd;
+            &quot;order_type&quot;: &quot;MakePayment&quot;,&#xd;
+            &quot;customer_name&quot;: &quot;tester&quot;,&#xd;
+            &quot;payment&quot;: {&#xd;
+                &quot;profile_id&quot;: &quot;${PROFILE_ID}&quot;,&#xd;
+                &quot;account_id&quot;: &quot;${ACCOUNT_ID}&quot;,&#xd;
+                &quot;amount&quot;: &quot;8000.0&quot;,&#xd;
+                &quot;amount_paid&quot;: &quot;&quot;,&#xd;
+                &quot;order_type&quot;: &quot;&quot;,&#xd;
+                &quot;collection_source_type&quot;: &quot;&quot;,&#xd;
+                &quot;collection_id&quot;: &quot;&quot;,&#xd;
+                &quot;comment&quot;: &quot;Ok&quot;,&#xd;
+                &quot;currency_code&quot;: &quot;IDR&quot;,&#xd;
+                &quot;card_number&quot;: &quot;&quot;,&#xd;
+                &quot;invoice_ids&quot;: &quot;&quot;,&#xd;
+                &quot;invoice_amounts&quot;: &quot;&quot;,&#xd;
+                &quot;payment_detail&quot;: [&#xd;
+                    {&#xd;
+                        &quot;payment_mode&quot;: &quot;9&quot;,&#xd;
+                        &quot;reference_external_id&quot;: &quot;2001&quot;,&#xd;
+                        &quot;amount_paid&quot;: &quot;8000.0&quot;,&#xd;
+                        &quot;amount_description&quot;: &quot;card payment&quot;,&#xd;
+                        &quot;mode_detail&quot;: [&#xd;
+                            {&#xd;
+                                &quot;key&quot;: &quot;payment_subscriber_id&quot;,&#xd;
+                                &quot;value&quot;: &quot;&quot;&#xd;
+                            }&#xd;
+                        ]&#xd;
+                    }&#xd;
+                ]&#xd;
+            },&#xd;
+            &quot;dataset&quot;: {&#xd;
+                &quot;param&quot;: [&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;entity_id&quot;,&#xd;
+                        &quot;value&quot;: &quot;200&quot;&#xd;
+                    },&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;order_id&quot;,&#xd;
+                        &quot;value&quot;: &quot;${ORDER_ID}&quot;&#xd;
+                    },&#xd;
+                    {&#xd;
+                        &quot;id&quot;: &quot;service_id&quot;,&#xd;
+                        &quot;value&quot;: &quot;${MSISDN}&quot;&#xd;
+                    }&#xd;
+                ]&#xd;
+            }&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">10001</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/APIGateway/APIRequest/Submit</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GetAsset_TMSISDN" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;Request&quot;:{&#xd;
+        &quot;request_id&quot;:&quot;${REQUEST_ID5}&quot;,&#xd;
+        &quot;request_timestamp&quot;:&quot;25062019140119&quot;,&#xd;
+        &quot;action&quot;:&quot;GetAssets&quot;,&#xd;
+        &quot;userid&quot;:&quot;SR12311875887651b&quot;,&#xd;
+        &quot;username&quot;:&quot;SmartAttacker&quot;,&#xd;
+        &quot;source_node&quot;:&quot;SmartAttacker&quot;,&#xd;
+        &quot;dataset&quot;:{&#xd;
+            &quot;param&quot;:[&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;product_type&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;asset_status&quot;,&#xd;
+                    &quot;value&quot;:&quot;1&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;asset_id&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;product_id&quot;,&#xd;
+                    &quot;value&quot;:&quot;41327&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;offset&quot;,&#xd;
+                    &quot;value&quot;:&quot;1&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;limit&quot;,&#xd;
+                    &quot;value&quot;:&quot;10&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;start_range&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;end_range&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;pos_id&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;category_id&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;is_fresh&quot;,&#xd;
+                    &quot;value&quot;:&quot;true&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;entity_id&quot;,&#xd;
+                    &quot;value&quot;:&quot;200&quot;&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">10001</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/APIGateway/APIRequest/Submit</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">INTERIMM</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.Response.asset_details.assets[5].asset_specific_info[8].value</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">SERIAL_NUMBER</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.Response.asset_details.assets[0].asset_specific_info[0].value</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UpdateOrder" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;Request&quot;:{&#xd;
+        &quot;request_id&quot;:&quot;${REQUEST_ID6}&quot;,&#xd;
+        &quot;action&quot;:&quot;UpdateOrder&quot;,&#xd;
+        &quot;request_timestamp&quot;:&quot;26122017140116&quot;,&#xd;
+        &quot;source_node&quot;:&quot;SmartAttacker&quot;,&#xd;
+        &quot;userid&quot;:&quot;1&quot;,&#xd;
+        &quot;username&quot;:&quot;SuperAdmin&quot;,&#xd;
+        &quot;dataset&quot;:{&#xd;
+            &quot;param&quot;:[&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;order_id&quot;,&#xd;
+                    &quot;value&quot;:&quot;${ORDER_ID}&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;sub_order_id&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;month&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;entity_id&quot;,&#xd;
+                    &quot;value&quot;:&quot;200&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;type&quot;,&#xd;
+                    &quot;value&quot;:&quot;sim_delivery&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;new_imsi&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;new_iccid&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;new_msisdn&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;nik&quot;,&#xd;
+                    &quot;value&quot;:&quot;5534555789077891&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;nokk&quot;,&#xd;
+                    &quot;value&quot;:&quot;4435666789071234&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;serial_number&quot;,&#xd;
+                    &quot;value&quot;:&quot;&quot;&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;id&quot;:&quot;interim_number&quot;,&#xd;
+                    &quot;value&quot;:&quot;${INTERIMM}&quot;&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">10001</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/APIGateway/APIRequest/Submit</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
